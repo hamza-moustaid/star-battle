@@ -1,0 +1,274 @@
+@font-face{
+	font-family: almendra;
+	src: url('Almendra-Regular.ttf');
+}
+body{
+	position: relative;
+	font-family: almendra;
+}
+#instruction{
+	position: relative;
+	width: 960px;
+	height: 600px;
+	background: url('images/instruction.png') no-repeat top center;
+}
+.title{
+	position: relative;
+	color: white;
+	font-size:30pt;
+	top: 50px;
+	left: -150px;
+}
+#instruction1{
+	float: left;
+	top: 150px;
+	left: 25px;
+	font-size: 15pt;
+	line-height:30px;
+	font-weight: bold;
+	text-align: left;
+	position: relative;
+	width: 415px;
+	color: white;
+}
+#instruction2{
+	float: right;
+	top: 105px;
+	left: -20px;
+	font-size: 15pt;
+	line-height:28px;
+	font-weight: bold;
+	text-align: left;
+	position: relative;
+	width: 430px;
+	color: white;
+}
+.battle{
+	position: absolute;
+	color: #ff541d;
+	font-size: 21pt;
+	font-weight: bold;
+	top: 480px;
+	left: 200px;
+	text-shadow: 15px 5px 15px #ff541d;
+}
+.btn_start{
+	position: absolute;
+	border: none;
+	width: 171px;
+	height: 68px;
+	background: url('images/btn_start.png');
+	font-size: 18pt;
+	padding-top: 23px;
+	color: #db3f3d;
+	font-weight: bold;
+	top: 520px;
+	left: 40%;
+	overflow:hidden;
+    transform:translate3d(0,0,0)
+}
+.btn_start:after{
+    content:"";
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    pointer-events:none;
+    background-image:radial-gradient(circle,#000 10%,transparent 10.01%);
+    background-repeat:no-repeat;
+    background-position:50%;
+    transform:scale(9,9);
+    opacity:0;
+    transition:transform .5s,opacity 1s
+}
+.btn_start:active:after{
+    transform:scale(0,0);
+    opacity:.2;
+    transition:0s
+    }
+.btn_start:hover{
+	cursor: pointer;
+	background: url('images/btn_start_hover.png');
+	color: white;
+}
+#gameboared{
+	position: relative;
+	width: 960px;
+	height: 600px;
+	background: url('images/game-boared.png') no-repeat top center;
+}
+#fuel{
+	position: relative;
+	float: left;
+	color: white;
+	font-size: 25pt;
+	top: 25px;
+	left: 25px;
+}
+#time{
+	position: relative;
+	top: 25px;
+	left: -85px;
+	float: right;
+	color: white;
+	font-size: 25pt;
+}
+#score{
+	position: absolute;
+	top: 25px;
+	left: 315px;
+	float: left;
+	color: white;
+	font-size: 25pt;
+}
+#controls{
+	position: absolute;
+	top: 25px;
+	left: 600px;
+	float: right;
+	color: white;
+	font-size: 25pt;
+	z-index: 124123414;
+}
+#airplane{
+	position: absolute;
+	background: url('images/airplane.png') no-repeat;
+	width: 95px;
+	height: 62px;
+	top: 250px;
+}
+#aircraft{
+	position: relative;
+	z-index: 1021;
+}
+#planet1{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 600px;
+	background: url('images/planet.png');
+	background-size: 1500px;
+	opacity: 0.3;
+	z-index: 2;
+}
+#planet2{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 600px;
+	background: url('images/planet.png');
+	background-size: 900px;
+	opacity: 0.3;
+	z-index: 2;
+}
+#gameover{
+	position: relative;
+	width: 960px;
+	height: 600px;
+	background: url('images/gameover.png') no-repeat top center;
+}
+input[name='name']{
+	position: relative;
+	width: 321px;
+	height: 58px;
+	border: none;
+	background: url('images/zone.png');
+	top: 250px;
+	color: white;
+	text-align: center;
+	font-size: 20pt;
+}
+.btn_continue{
+	position: relative;
+	width: 248px;
+	height: 52px;
+	border: none;
+	background: url('images/btn_continue.png');
+	font-size: 18pt;
+	padding-left: 40px;
+	color: white;
+	font-weight: bold;
+	top: 300px;
+}
+.btn_continue:hover{
+	cursor: pointer;
+	background: url('images/btn_continue_hover.png');
+	color: white;
+}
+
+#ranking{
+	position: relative;
+	width: 960px;
+	height: 600px;
+	background: url('images/ranking.png') no-repeat top center;
+}
+#score_table{
+	position: absolute;
+	width: 560px;
+	height: 233px;
+	overflow: auto;
+	top: 272px;
+	left: 200px;
+	font-size: 15pt;
+}
+#score_table table tr td{
+	width: 135px;
+	height: 29px;
+	text-align: center; 
+	color: white;
+}
+.btn_restart{
+	position: relative;
+	width: 248px;
+	height: 52px;
+	border: none;
+	background: url('images/btn_continue.png');
+	font-size: 18pt;
+	padding-left: 40px;
+	color: white;
+	font-weight: bold;
+	top: 530px;
+}
+.btn_restart:hover{
+	cursor: pointer;
+	background: url('images/btn_continue_hover.png');
+	color: white;
+}
+.ship,.astroid,.fuel{
+	position: absolute;
+	z-index: 10000;
+}
+#up{
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	z-index: 90000000;
+}
+#down{
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	top: 550px;
+	z-index: 90000000;
+}
+#left{
+	position: absolute;
+	width: 50px;
+	height: 600px;
+	z-index: 90000000;
+}
+#right{
+	position: absolute;
+	left: 910px;
+	width: 50px;
+	height: 600px;
+	z-index: 90000000;
+}
+.shoot,.shoot1{
+	position: absolute;
+	width: 12px;
+	height: 4px;
+	background-color: yellow;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Star Battle</title>
+	<script type="text/javascript" src='jquery-3.2.1.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<audio id="bg-sound"><source src="sound/background.mp3"></audio>
+<audio id="destroy-sound"><source src="sound/destroyed.mp3"></audio>
+<audio id="shoot-music"><source src="sound/shoot.mp3"></audio>
+<center>
+	<div id="instruction">
+		<label class="title">The instruction to the user</label>
+		<div id="instruction1">
+			<p>1. Move the spaceship using the sensible areas in the screen.<br/>
+				2. The timer present the time lapsed.<br/>
+				3. The fuel counter show the remain fuel.<br/>
+				4. During the flight, the spaceship needs to destroy the asteroids and enemy spaceships that are presented in the space.<br/>
+				5. You can shoot pressing Space Bar.<br/>
+				6. If the spaceship hits a asteroid or another spaceship, you lose 15 points of fuel.</p>
+		</div>
+		<div id="instruction2">
+			<p>7. Enemy spaceship needs 1 shot to be destroyed, you will get 5 points for each enemy destroyed.<br/>
+				8. Asteroid needs 2 shots to be destroyed, you will get 10 points for each asteroid destroyed.<br/>
+				9. If you destroy a friendly spaceship, you lose 10 points.<br/>
+				10. During the flight, the spaceship needs to collect fuel in the space.<br/>
+				11. You can pause the game clicking in a button pause, or pressing the letter "p".<br/>
+				12. Go beyond all limits.</p>
+		</div>
+		<label class="battle">Battle in Space with Star Battle Championship...</label>
+		<button class="btn_start">Start Game</button>
+	</div>
+
+	<div id="gameboared">
+		<div id="up"></div>
+		<div id="down"></div>
+		<div id="left"></div>
+		<div id="right"></div>
+
+		<div id="fuel">15</div>
+		<div id="time">00:00 </div>
+		<div id="score">0</div>
+		<div id="controls">
+			<a href="#"><img src="images/pause.png" id="pause"></a>
+			<a href="#"><img src="images/volume.png" id="volume"></a>
+			<a href="#"><img src="images/font-plus.png" id="font-plus"></a>
+			<a href="#"><img src="images/font-moins.png" id="font-moins"></a>
+		</div>
+
+		<div id="aircraft">
+			<div id="airplane"></div>
+		</div>
+		
+
+		<div id="planet1"></div>
+		<div id="planet2"></div>
+	</div>
+
+	<div id="gameover">
+		<input type="text" name="name" placeholder="Your name"><br/>
+		<button class="btn_continue" >Continue</button>
+	</div>
+
+	<div id="ranking">
+		<div id="score_table">
+			<table>
+				<tbody>
+
+				</tbody>
+			</table>
+		</div>
+		<button class="btn_restart">Start Game</button>
+	</div>
+</center>
+</body>
+<script type="text/javascript" src='script.js'></script>
+
+</html>
